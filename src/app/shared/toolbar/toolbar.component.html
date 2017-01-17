@@ -1,0 +1,16 @@
+<a class="al-logo clearfix"><img src="/assets/img/Spotify-logo.png" style="width: 30px; height: 30px;" /></a>
+<a class="toolicons ion-ios-home-outline" [routerLink]="['/home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"></a>
+<a class="toolicons ion-ios-musical-notes" [routerLink]="['/manage/student/propphase']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"></a>
+
+<div class="employeeWindow">
+    <a class="toolicons"><img src="/assets/svg/hoofdmenu_bel.svg" /></a>
+    <div class="profileWindow">
+        <img class="profilePic" [(src)]="profileImageSource">
+    </div>
+    <a (click)="toggleProfileMenu()" class="collapse-menu-link"><img src="/assets/svg/arrow_down.svg" /></a>
+    <div *ngIf="menuActive" class="menu">
+        <ul>
+            <li><lang-switcher></lang-switcher></li>
+        </ul>
+    </div>
+</div>
